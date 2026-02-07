@@ -2,59 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>For You ❤️</title>
+  <title>Will You Be My Valentine?</title>
   <style>
     body {
-      background: linear-gradient(135deg, #ff758c, #ff7eb3);
-      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      color: #fff;
-      text-align: center;
     }
+
     .card {
-      background: rgba(255, 255, 255, 0.15);
+      background: white;
       padding: 30px;
       border-radius: 20px;
+      text-align: center;
+      width: 300px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      max-width: 350px;
     }
-    h1 {
-      font-size: 28px;
+
+    .emoji {
+      font-size: 60px;
       margin-bottom: 10px;
     }
-    p {
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      position: relative;
+      height: 80px;
+    }
+
+    button {
+      padding: 10px 25px;
       font-size: 16px;
-      line-height: 1.6;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
     }
-    .heart {
-      font-size: 50px;
-      margin: 15px 0;
-      animation: beat 1s infinite;
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
     }
-    @keyframes beat {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+
+    #no {
+      background: #ccc;
+      position: absolute;
+      left: 180px;
+      top: 0;
     }
   </style>
 </head>
 <body>
+
   <div class="card">
-    <h1>Hey You ❤️</h1>
-    <div class="heart">💖</div>
-    <p>
-      I’ve been meaning to tell you this for a while…<br><br>
-      You make my days brighter,<br>
-      my smiles real,<br>
-      and my heart feel calm.<br><br>
-      So I just wanted to ask—
-      <br><br>
-      <strong>Will you be my Valentine? 🌹</strong>
-    </p>
+    <div class="emoji">🥰</div>
+    <h2>Nirali, will you be my Valentine? 💖</h2>
+
+    <div class="buttons">
+      <button id="yes" onclick="yesClicked()">Yes</button>
+      <button id="no" onmouseover="moveNo()">No</button>
+    </div>
+
+    <p style="font-size:12px; margin-top:10px;">*No seems a bit shy 😜</p>
   </div>
+
+  <script>
+    function moveNo() {
+      const noBtn = document.getElementById("no");
+      const x = Math.random() * 150;
+      const y = Math.random() * 40;
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          height:100vh;
+          font-family:Arial;
+          background:linear-gradient(135deg,#ff758c,#ff7eb3);
+          color:white;
+          text-align:center;">
+          <div>
+            <h1>Yayyy! 💕🥳</h1>
+            <p>You just made my day ❤️</p>
+          </div>
+        </div>
+      `;
+    }
+  </script>
+
 </body>
 </html>
