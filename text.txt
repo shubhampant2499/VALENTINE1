@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 350px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .heart {
+      font-size: 50px;
+      margin: 15px 0;
+      animation: beat 1s infinite;
+    }
+    @keyframes beat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hey You ❤️</h1>
+    <div class="heart">💖</div>
+    <p>
+      I’ve been meaning to tell you this for a while…<br><br>
+      You make my days brighter,<br>
+      my smiles real,<br>
+      and my heart feel calm.<br><br>
+      So I just wanted to ask—
+      <br><br>
+      <strong>Will you be my Valentine? 🌹</strong>
+    </p>
+  </div>
+</body>
+</html>
