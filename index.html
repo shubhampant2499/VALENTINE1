@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .emoji {
+      font-size: 60px;
+    }
+    button {
+      padding: 10px 25px;
+      border-radius: 25px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #yes { background: #ff4d6d; color: white; }
+    #no { background: #ccc; position: absolute; }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <div class="emoji">🥰</div>
+  <h2>Nirali, will you be my Valentine? 💖</h2>
+
+  <div style="position:relative;height:70px;">
+    <button id="yes" onclick="yes()">Yes</button>
+    <button id="no" onmouseover="move()">No</button>
+  </div>
+
+  <p style="font-size:12px;">*No seems a bit shy 😜</p>
+</div>
+
+<script>
+function move() {
+  const n = document.getElementById("no");
+  n.style.left = Math.random() * 150 + "px";
+  n.style.top = Math.random() * 40 + "px";
+}
+function yes() {
+  document.body.innerHTML = "<h1 style='color:white'>Yayyy 💕</h1>";
+}
+</script>
+
+</body>
+</html>
